@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/AustenVanBrogen/getPicDiscordBot/issues"
   },
-  "homepage": "https://github.com/AustenVanBrogen/getPicDiscordBot#readme"
+  "homepage": "https://github.com/AustenVanBrogen/getPicDiscordBot#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
 }

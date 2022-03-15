@@ -52,6 +52,20 @@ function getPicture(message, command, options)
   });
 }
 
+function showCatPicture(message, response)
+{
+  try{
+    let catJSON = JSON.parse(JSON.stringify(response));
+    //console.log(catJSON.url);
+    //console.log(catJSON);
+    message.channel.send(catJSON[0].url);
+  }
+  catch(error){
+    console.log(error);
+    message.channel.send('https://cdn2.thecatapi.com/images/MTU1ODY2MA.jpg');
+  }
+}
+
 client.once('ready', () => {
     console.log("getPicureBot is online")
 });

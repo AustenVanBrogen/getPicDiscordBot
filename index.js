@@ -4,9 +4,11 @@ const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_
 const fs = require('fs');
 const https = require('https');
 const { promisify } = require('util');
+require("dotenv").config();
 
-let keys = JSON.parse(fs.readFileSync('keys.json'));
-let botToken = keys.botToken;
+//let keys = JSON.parse(fs.readFileSync('keys.json'));
+//let botToken = keys.botToken;
+botToken = process.env.BOT_TOKEN;
 const prefix = '!';
 
 function showPicture(pictureJSON)

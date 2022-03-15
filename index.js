@@ -77,7 +77,12 @@ client.on('messageCreate', async (message) => {
     }
     else if(command === 'cat')
     {
-
+      hostname = 'api.thecatapi.com';
+      path = '/v1/images/search';
+      //console.log(hostname + path);
+      getPicture(message, command, buildOptions(hostname, path))
+      .then(response => showCatPicture(message, response))
+      .catch(error => console.log(error));
     }
 });
 
